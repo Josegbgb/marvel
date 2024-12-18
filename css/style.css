@@ -1,0 +1,234 @@
+body {
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+  margin: 0;
+}
+
+.tittle {
+  color: black;
+  font-size: large;
+}
+#contenedor {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgb(5, 10, 5), rgb(90, 40, 90, 0.8)),
+    url(a.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+nav {
+  width: 80%;
+  /**margin: auto;*/
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: antiquewhite;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+nav ul li::before {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: yellowgreen;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  transition: 0.4s ease-out;
+}
+nav ul li:hover::before {
+  width: 100%;
+}
+#logo {
+  width: 130px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.list-group-item {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+.list-group {
+  top: 100%;
+  width: 35%;
+  position: absolute;
+}
+#flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#buscador {
+  height: 40px;
+  width: 35%;
+
+  border-color: rgb(83, 83, 83);
+  color: rgb(255, 255, 255);
+  background: transparent;
+}
+
+.container {
+  margin-top: 160px;
+}
+.img-thumbnail {
+  width: 100% !important;
+  height: 80% !important;
+}
+h1 {
+  margin-top: 100px;
+  text-align: center;
+}
+.section-login {
+  background-image: linear-gradient(rgb(5, 10, 5), rgb(90, 40, 90, 0.8)),
+    url(marvel.jpg);
+
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.section-login div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  border: solid 1em;
+  border-radius: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: rgba(165, 42, 42, 0.178);
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(247, 247, 247);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 10px;
+}
+input {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.199);
+  margin-bottom: 20px;
+  width: 80%;
+  height: 50px;
+  border: solid 2px;
+  margin-bottom: 1em !important;
+}
+#enviar {
+  background-color: black;
+  color: white;
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: auto;
+  border-radius: 1em;
+  font-weight: 900;
+  align-content: center;
+}
+.spa {
+  background-color: rgba(255, 228, 196, 0.857);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.col-md-4 {
+  width: 20% !important;
+}
+.usuario-error {
+  display: none;
+  color: rgb(255, 255, 255);
+}
+.campos-error {
+  display: none;
+  color: rgb(255, 255, 255);
+}
+#marvel-page {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.parrafo {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  z-index: 1;
+  color: rgb(0, 0, 0);
+}
+
+.accordion-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  margin: 0;
+  height: 50px;
+  background-color: rgb(214, 90, 23);
+  width: 100%;
+}
+
+#section_accordion {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 228, 196, 0.857);
+  height: 100vh;
+}
+.accordion {
+  width: 70%;
+}
+#panelsStayOpen-collapseOne {
+  background-color: rgba(79, 77, 77, 0.42) !important;
+}
+#panelsStayOpen-collapseTwo {
+  background-color: rgba(220, 6, 6, 0.42) !important;
+}
+#panelsStayOpen-collapseThree {
+  background-color: rgba(65, 134, 177, 0.42) !important;
+}
+.accordion-item {
+  color: rgb(0, 0, 0) !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: rgba(33, 131, 80, 0) !important;
+}
+#logos {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+.fotos_logos {
+  margin-top: 2em;
+  width: 120px;
+  height: 100px;
+}

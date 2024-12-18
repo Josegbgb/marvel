@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    
+    <title>U-HeroPage</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    
+    <script src="js/personas.js"></script>
+    <script  src="js/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body id="body">
+
+    <div id="contenedor">
+      <nav>
+        <img src="m.png" alt="" id="logo" />
+        <ul id="padre">
+          
+          <li data-attribute="personajes"  class="enlace">Personajes</li>
+          <li data-attribute="historietas" class="enlace">Historietas</li>
+          <li data-attribute="registrarse"  class="enlace" id="singUp">
+            Registrarse
+          </li>
+          <li
+            data-attribute="Iniciar sesion"
+
+            class="enlace"
+            id="login"
+          >
+            Iniciar sesion
+          </li>
+        </ul>
+      </nav>
+      
+      <div id="flex">
+        <input type="search" id="buscador" placeholder="Buscar" />
+      
+        <ul class="list-group">
+       
+        </ul>
+      </div>
+    </div>
+
+
+          
+    <section id="section_accordion">
+      <!--inicio acordion-->   
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <h2 class="accordion-head">
+        Marvel 
+    </h2>
+    <!---->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        ¿Que es?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        Marvel Cómics es una editorial norteamericana de cómics. Es conocida popularmente como "La casa de las ideas" por la creación de numerosos personajes emblemáticos del género de superhéroes. Algunos de sus cómics más conocidos son Los 4 Fantásticos, Spider-Man, Daredevil, Capitán América, Los Vengadores, Iron Man, Hulk, Wolverine y los X-Men. Desde los años 60 la compañía constituye una de las mayores editoriales de este género. Localizada en Nueva York, fue fundada en el 387 de Park Avenue South, teniendo sus oficinas en la actualidad en el 40th East 10th Avenue.
+      </div>
+    </div>
+  </div>
+  <!--inicio acordion-->   
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Origenes
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        Marvel Comics nació en 1939 como una editorial de cómics de superhéroes fundada por Martin Goodman, que entonces tenía 31 años. En un primer momento, se trataba de un proyecto secundario del emprendedor, que ya tenía otra editorial especializada en novelas ambientadas en el oeste americano. Durante sus primeros años de vida, Marvel gozó de relativo éxito gracias a los cómics de Spiderman o los X-Men, que quedaron en la memoria de millones de niños en Estados Unidos. Sin embargo, el crecimiento del sector del cómic terminó por ser una burbuja, algo que terminó por frenar de manera considerable el desarrollo de la compañía.
+      </div>
+    </div>
+  </div>
+  <!--inicio acordion-->   
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Comics clasicos
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        ESPECIAL PRIMAVERA 1989 (dedicado al Capitán América), ESPECIAL VERANO 1989, ESPECIAL INVIERNO 1989 (dedicado a Los 4 Fantásticos), ESPECIAL PRIMAVERA 1990, ESPECIAL VERANO 1990 (Dedicado a Los Vengadores), ESPECIAL INVIERNO 1990 (dedicado a Daredevil); éstos fueron cuadernos de 64 páginas con un PVP de 250 a 275 pts.). En la colección regular se desarrollaron las siguientes series: 1 al 4- Guerra Kree Skrull, 5 al 7- Nick Furia agente de SHIELD, 8 al 9- Caballero Luna, 10 al 11- Los Vengadores, 12 al 13- Spiderman: La muerte de Gwen Stacy, 14- Hulk, 15 al 17- Lobezno, 18 al 19- El nacimiento de Estela Plateada (de Lee y Kirby), 20 al 24- La Patrulla-X: La muerte del Angel, 25 Power Man & Iron Fist, 26 al 29- Los Vengadores: Saga de la Contratierra 
+      </div>
+    </div>
+  </div>
+  <!--fin acordion-->   
+</div>
+
+<div id="logos">
+  <img src="ironman.png" alt="" class="fotos_logos">
+  <img src="escudo.png" alt="" class="fotos_logos">
+  <img src="thor.png" alt="" class="fotos_logos">
+  <img src="hulk.png" alt="" class="fotos_logos">
+  <img src="spiderman.png" alt="" class="fotos_logos">
+ 
+</div>
+    </section>
+   
+
+   
+</html>
