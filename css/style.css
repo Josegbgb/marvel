@@ -6,7 +6,7 @@ body {
 
 .tittle {
   color: black;
-  font-size: large;
+  font-size: medium;
 }
 #contenedor {
   display: flex;
@@ -87,15 +87,18 @@ nav ul li:hover::before {
 }
 
 .container {
-  margin-top: 160px;
+  margin-top: 2em;
 }
 .img-thumbnail {
-  width: 100% !important;
-  height: 80% !important;
+  width: 150px !important;
+  height: 150px !important;
 }
 h1 {
   margin-top: 100px;
   text-align: center;
+}
+a {
+  text-decoration: none !important;
 }
 .section-login {
   background-image: linear-gradient(rgb(5, 10, 5), rgb(90, 40, 90, 0.8)),
@@ -162,6 +165,7 @@ input {
 }
 .col-md-4 {
   width: 20% !important;
+  padding: 0 6px !important;
 }
 .usuario-error {
   display: none;
