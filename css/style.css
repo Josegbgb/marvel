@@ -91,7 +91,7 @@ a {
   background-image: linear-gradient(rgb(5, 10, 5), rgb(90, 40, 90, 0.8)),
     url(marvel.jpg);
 
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -252,7 +252,7 @@ form input {
     width: 100%;
   }
   nav ul li {
-    margin: 0 10px;
+    margin: 0 5px;
     font-size: smaller;
   }
   #logo {
