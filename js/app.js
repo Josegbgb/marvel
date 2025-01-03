@@ -94,9 +94,6 @@ let registrarse = `
   
   <input type="email" id="correo">
   
-  <label for="fechaDeNacimiento">Fecha de nacimiento</label>
-  
-  <input type="date" id="fechaDeNacimiento">
 
   <label for="contraseña">Contraseña</label>
 
@@ -142,31 +139,30 @@ let login = `
     </section>
 `;
 let personajePage = `
-<section class="spa">
- <nav class="nav-login">
-       <img src="m.png" class="enlace" id="logo" data-attribute="index"/>
-  </nav>
-<div class="paginas-spa">
-  <h1>Personajes destacados</h1>
-    <div class="container">
-      <div class="row" id="marvel-row"></div>
+  <section class="spa">
+    <nav class="nav-login">
+      <img src="m.png" class="enlace" id="logo" data-attribute="index"/>
+    </nav>
+    <div class="paginas-spa">
+      <h1>Personajes destacados</h1>
+      <div class="container">
+        <div class="row" id="marvel-row"></div>
+      </div>
     </div>
-
-</div>
-</section>
+  </section>
 `;
 let historietaPage = `
-
   <section class="spa">
-   <nav class="nav-login">
-       <img src="m.png" class="enlace" id="logo" data-attribute="index"/>
-  </nav>
- <h1>Historietas destacadas</h1>
-    <div class="container">
-      <div class="row" id="marvel-row-serie"></div>
-  </div>
+    <nav class="nav-login">
+      <img src="m.png" class="enlace" id="logo" data-attribute="index"/>
+    </nav>
+    <div class="paginas-spa">
+      <h1>Historietas destacadas</h1>
+      <div class="container">
+        <div class="row" id="marvel-row-serie"></div>
+      </div>
+    </div>
   </section>
-
 `;
 // fin variables SPA
 

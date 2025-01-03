@@ -3,14 +3,12 @@ body {
   padding: 0;
   margin: 0;
 }
-
 .tittle {
   color: black;
-  font-size: medium;
+  font-size: 13px;
 }
 #contenedor {
   display: flex;
-
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -23,7 +21,6 @@ body {
 }
 nav {
   width: 80%;
-  /**margin: auto;*/
   padding: 35px 0;
   display: flex;
   align-items: center;
@@ -36,7 +33,6 @@ nav ul li {
   margin: 0 20px;
   color: white;
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
   position: relative;
 }
 nav ul li::before {
@@ -58,8 +54,7 @@ nav ul li:hover::before {
   padding-bottom: 10px;
 }
 .list-group-item {
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
+  padding: 4px 0 !important;
 }
 .list-group {
   top: 100%;
@@ -68,8 +63,6 @@ nav ul li:hover::before {
 }
 #flex {
   display: flex;
-  align-items: center;
-  flex-direction: column;
   width: 100%;
   justify-content: center;
   position: absolute;
@@ -80,21 +73,15 @@ nav ul li:hover::before {
 #buscador {
   height: 40px;
   width: 35%;
-
   border-color: rgb(83, 83, 83);
-  color: rgb(255, 255, 255);
+  color: white;
   background: transparent;
+  border: solid 2px;
+  background-color: rgba(0, 0, 0, 0.199);
 }
 
-.container {
-  margin-top: 2em;
-}
-.img-thumbnail {
-  width: 150px !important;
-  height: 150px !important;
-}
 h1 {
-  margin-top: 100px;
+  font-size: larger !important;
   text-align: center;
 }
 a {
@@ -120,11 +107,10 @@ a {
   align-items: center;
 }
 form {
-  border: solid 1em;
+  border: solid rgb(255, 255, 255) 3px;
   border-radius: 2em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  background-color: rgba(165, 42, 42, 0.178);
+  padding: 2em 0;
+  background: rgba(72, 3, 3, 0.148);
   width: 35%;
   display: flex;
   flex-direction: column;
@@ -137,35 +123,49 @@ label {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-bottom: 10px;
 }
-input {
+form input {
+  background-color: transparent;
   color: white;
-  background-color: rgba(0, 0, 0, 0.199);
-  margin-bottom: 20px;
-  width: 80%;
-  height: 50px;
-  border: solid 2px;
-  margin-bottom: 1em !important;
+  border: 1px solid white;
 }
 #enviar {
   background-color: black;
   color: white;
   height: 50px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 10px;
   width: auto;
   border-radius: 1em;
   font-weight: 900;
   align-content: center;
 }
+.container {
+  width: 100% !important;
+  margin: 2em 0;
+  max-width: none !important;
+}
 .spa {
   background-color: rgba(255, 228, 196, 0.857);
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
 }
+.row {
+  justify-content: center;
+}
 .col-md-4 {
   width: 20% !important;
-  padding: 0 6px !important;
+  text-align: center;
+  margin: 4px 4px;
+  border: 1px solid white;
+  padding: 0 0 !important;
+  padding-top: 4px !important;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.22);
+  border-radius: 17px;
+  transition: all 0.5s;
+}
+.paginas-spa {
+  width: 100%;
 }
 .usuario-error {
   display: none;
@@ -175,20 +175,6 @@ input {
   display: none;
   color: rgb(255, 255, 255);
 }
-#marvel-page {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-}
-.parrafo {
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  z-index: 1;
-  color: rgb(0, 0, 0);
-}
-
 .accordion-head {
   display: flex;
   justify-content: center;
@@ -199,14 +185,13 @@ input {
   background-color: rgb(214, 90, 23);
   width: 100%;
 }
-
 #section_accordion {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: rgba(255, 228, 196, 0.857);
-  height: 100vh;
+  min-height: 100vh;
 }
 .accordion {
   width: 70%;
@@ -232,7 +217,282 @@ input {
   width: 70%;
 }
 .fotos_logos {
+  object-fit: cover;
   margin-top: 2em;
-  width: 120px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
+}
+.img-thumbnail {
+  width: 100px !important;
+  height: 100px !important;
+  transition: 0.3s ease;
+}
+.col-md-4:hover .img-thumbnail {
+  transform: scale(1) translateZ(0);
+}
+.col-md-4:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.col-md-4:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+@keyframes backgroundAnimation {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@media (max-width: 480px) {
+  nav {
+    width: 100%;
+  }
+  nav ul li {
+    margin: 0 10px;
+    font-size: smaller;
+  }
+  #logo {
+    width: 90px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  #section_accordion {
+    padding: 40px 0;
+  }
+  #padre {
+    margin: 10px 0 0 0;
+    padding-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  #buscador {
+    width: 45%;
+    height: 30px;
+  }
+  .list-group {
+    top: 100%;
+    width: 45%;
+    font-size: 12px;
+  }
+  .accordion {
+    width: 80%;
+    font-size: smaller;
+  }
+  .accordion-head {
+    font-size: medium;
+  }
+  .fotos_logos {
+    width: 50px;
+    height: 50px;
+  }
+  #logos {
+    width: 100%;
+    justify-content: center;
+    gap: 25px;
+  }
+  .section-login {
+    background: linear-gradient(45deg, #8d0000, #44006b, #270164, #010433);
+    background-attachment: fixed;
+    background-size: 500%;
+    animation: backgroundAnimation 4s infinite ease;
+  }
+  form {
+    border: solid 0.5em;
+    width: 80%;
+  }
+  label {
+    font-size: medium;
+  }
+  input {
+    height: 35px;
+  }
+  #enviar {
+    font-size: smaller;
+  }
+  .col-md-4 {
+    width: 30% !important;
+
+    margin: 4px 4px;
+  }
+  .img-thumbnail {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .tittle {
+    font-size: 10px;
+  }
+  .paginas-spa {
+    width: 100%;
+  }
+  .spa {
+    padding-bottom: 4em;
+  }
+  .spa h1 {
+    font-size: medium;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  nav {
+    width: 100%;
+  }
+  nav ul li {
+    margin: 0 10px;
+    font-size: smaller;
+  }
+  #logo {
+    width: 100px;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+  }
+  #section_accordion {
+    padding: 40px 0;
+  }
+  #padre {
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 2em;
+    margin-bottom: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+  #buscador {
+    width: 45%;
+    height: 30px;
+    max-width: 260px;
+  }
+  .list-group {
+    top: 100%;
+    width: 45%;
+    max-width: 260px;
+    font-size: 12px;
+  }
+  .accordion {
+    width: 80%;
+    font-size: smaller;
+  }
+  .accordion-head {
+    font-size: medium;
+  }
+  .accordion-button {
+    font-size: medium !important;
+  }
+  .fotos_logos {
+    width: 50px;
+    height: 50px;
+  }
+  #logos {
+    width: 100%;
+    justify-content: center;
+    gap: 3em;
+  }
+  .section-login {
+    background: linear-gradient(45deg, #8d0000, #44006b, #270164, #010433);
+    background-attachment: fixed;
+    background-size: 500%;
+    animation: backgroundAnimation 4s infinite ease;
+  }
+  form {
+    border: solid 0.5em;
+    width: 80%;
+    max-width: 420px;
+  }
+  label {
+    font-size: medium;
+  }
+  input {
+    height: 35px;
+    width: 60%;
+    margin-bottom: 0.5em !important;
+  }
+  #enviar {
+    font-size: smaller;
+  }
+  .col-md-4 {
+    width: 30% !important;
+    max-width: 150px !important;
+  }
+  .img-thumbnail {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .tittle {
+    font-size: 10px;
+  }
+  .spa h1 {
+    font-size: medium;
+  }
+  .paginas-spa {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    justify-content: space-around;
+    width: 100%;
+  }
+  nav ul li {
+    font-size: large;
+  }
+  #logo {
+    width: 115px;
+  }
+  #buscador {
+    height: 30px;
+  }
+  .list-group {
+    top: 100%;
+    font-size: 14px;
+  }
+  .accordion {
+    width: 85%;
+  }
+  .accordion-head {
+    font-size: large;
+  }
+  .fotos_logos {
+    width: 80px;
+    height: 70px;
+  }
+  #logos {
+    width: 100%;
+    justify-content: center;
+    gap: 3em;
+  }
+  form {
+    border: solid 0.5em;
+    width: 80%;
+    max-width: 420px;
+  }
+  label {
+    font-size: medium;
+  }
+  input {
+    height: 35px;
+    width: 60%;
+  }
+  .col-md-4 {
+    width: 30% !important;
+    max-width: 150px !important;
+  }
+  .img-thumbnail {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .tittle {
+    font-size: 10px;
+  }
+  .spa h1 {
+    font-size: medium;
+  }
+  .paginas-spa {
+    width: 100%;
+  }
 }
